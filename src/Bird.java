@@ -1,23 +1,9 @@
 public class Bird extends Animal{
-    private String featherColor;
+    private final String featherColor;
 
-    public Bird() {}
 
     public Bird(String name, int age, double weight, String featherColor) {
         super(name, age, weight);
-        this.featherColor = featherColor;
-    }
-
-    public Bird(String name, int age, String featherColor) {
-        super(name, age);
-        this.featherColor = featherColor;
-    }
-
-    public String getFeatherColor() {
-        return featherColor;
-    }
-
-    public void setFeatherColor(String featherColor) {
         this.featherColor = featherColor;
     }
 
@@ -29,10 +15,6 @@ public class Bird extends Animal{
     @Override
     public void getVoice() {
         System.out.println("Bird is chirping");
-    }
-
-    public void fly() {
-        System.out.println("Bird is flying");
     }
 
     @Override

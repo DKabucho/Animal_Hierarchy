@@ -1,24 +1,10 @@
-public class Blowfish extends Fish {
-    private boolean isInflated;
+public class Blowfish extends Fish implements AnimalBehavior, AnimalMove {
+    private final boolean isInflated;
 
-    public Blowfish() {}
 
     public Blowfish(String name, int age, double weight, String waterType, boolean isInflated) {
         super(name, age, weight, waterType);
         this.isInflated = isInflated;
-    }
-
-    public Blowfish(String name, int age, String waterType, boolean isInflated) {
-        super(name, age, waterType);
-        this.isInflated = isInflated;
-    }
-
-    public boolean isInflated() {
-        return isInflated;
-    }
-
-    public void setInflated(boolean inflated) {
-        isInflated = inflated;
     }
 
     @Override
@@ -31,14 +17,21 @@ public class Blowfish extends Fish {
         System.out.println("Blowfish is making a sound");
     }
 
-    public void inflate() {
-        System.out.println("Blowfish is inflating");
+    @Override
+    public void move() {
+        System.out.println("Blowfish is swimming");
     }
 
+    @Override
+    public void sleep() {
+        System.out.println("Blowfish is sleeping");
+    }
     @Override
     public String toString() {
         return "Blowfish{" +
                 "isInflated=" + isInflated +
                 "} " + super.toString();
     }
+
+
 }

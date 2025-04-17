@@ -14,5 +14,14 @@ public class Main {
             animal.eat();
             animal.getVoice();
         }
+
+        AnimalBehavior [] behaviors = new AnimalBehavior[3];
+        behaviors[0] = new Dog("Buddy", 3, 20.5, "Golden Retriever");
+        behaviors[1] = new Pigeon("Sky", 1, 0.5, "Gray", "Rock Pigeon");
+        behaviors[2] = new Blowfish("Puffy", 2, 1.2, "Saltwater", true);
+
+        for (AnimalBehavior behavior : behaviors) {
+            behavior.sleep();
+        }
     }
 }
